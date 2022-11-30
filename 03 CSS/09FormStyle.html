@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      /* 테이블 기본 글꼴 */
+      font-family: sans-serif;
+      /* 테투리 굵기 실선 색상 */
+      border: 1.5px solid lightgray;
+      /* 텍스트 배치 형태 */
+      text-align: left;
+      /* 텍스트 크기 */
+      font-size: 0.8rem;
+      /* 셀과 테두리 병합 */
+      border-collapse: collapse;
+      /* 오른쪽 테두리 X */
+      border-right: 0px;
+    }
+    /* 테이블 제목 */
+    caption {
+      /* 텍스트 배치 */
+      text-align: left;
+      /* 텍스트 굵기 */
+      font-weight: 800;
+      /* 아래 태그와의 마진(거리) */
+      margin-bottom: 10px;
+    }
+
+    td,
+    th {
+      border: 1px solid lightgray;
+      color: rgb(72, 71, 71);
+      /* content와 테두리 사이의 거리 */
+      padding: 10px;
+    }
+
+    th {
+      background-color: rgb(222, 227, 227);
+    }
+
+    td {
+      border-right: 0px;
+    }
+
+    span {
+      font-size: 0.6rem;
+    }
+
+    input {
+      /* 블럭크기 계산시(너비 : Content+padding+테두리굵기의 합) */
+      box-sizing: border-box;
+      width: 150px;
+      height: 25px;
+      border: 1px solid lightgray;
+
+    }
+
+    input:focus {
+      /* input 태그의 focus이벤트시 표시되는 외부라인 */
+      outline: 2px dashed gray;
+      border: 0px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table>
+    <caption>사이트 이용정보 입력</caption>
+    <tr>
+      <th>아이디</th>
+      <td>
+        <span>영문자,숫자,_만 입력가능,최소3자이상 입력하세요</span><br>
+        <input <input type="text" style="margin-top:5px;">
+      </td>
+    </tr>
+    <tr>
+      <th>비밀번호</th>
+      <td><input></td>
+    </tr>
+    <tr>
+      <th>비밀번호 확인</th>
+      <td><input type="text"></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
