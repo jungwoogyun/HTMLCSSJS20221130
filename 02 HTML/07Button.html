@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- BS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <!-- BS Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <!-- 
+    FontAwesome 
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <!-- 기본버튼 onclick-->
+  <button onclick="alert('버튼1클릭')">버튼1</button>
+  <input type="button" value="버튼2" onclick="alert('버튼2클릭')" />
+  <input type="submit" value="버튼3" onclick="alert('버튼3클릭')" />
+  <hr>
+  <!-- 기본버튼+BS -->
+  <button onclick="alert('버튼1클릭')" class="btn btn-primary">버튼1</button>
+  <input type="button" value="버튼2" onclick="alert('버튼2클릭')" class="btn btn-success" />
+  <input type="submit" value="버튼3" onclick="alert('버튼3클릭')" class="btn btn-warning" />
+  <hr>
+  <!-- 기본버튼 + a태그 -->
+  <button><a href="https://www.naver.com" target="_blank">버튼</a></button>
+  <a href="https://www.naver.com">
+    <button>버튼</button>
+  </a>
+
+  <hr>
+  <!-- 이미지 버튼 -->
+  <button onclick="alert('강아지1');">
+    <img src="./dog.jpg" alt="강아지사진">
+  </button>
+
+  <a href="https://www.naver.com">
+    <img src="https://petami.co.kr/web/product/medium/202211/8579ef093630ec101e4949eb73f9cca0.jpg" alt="강아지사진">
+  </a>
+
+  <input type="image" src="./dog.jpg">
+
+
+  <hr>
+  <!-- icon 가져오기 -->
+
+  <!-- bs -->
+  <button onclick="alert('클릭됨');">
+    <i class="bi bi-mic" style="font-size:1rem;"></i>
+  </button>
+  <a href="#">
+    <i class="bi bi-mic" style="font-size:1rem;"></i>
+  </a>
+
+  <!-- 폰트어썸 -->
+  <svg style="width:20px;height:20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path
+      d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+    </svg>
+  <hr>
+  <i class="fa-solid fa-venus-mars fa-lg"></i>
+  <i class="fa-solid fa-venus-mars fa-2x"></i>
+  <i class="fa-solid fa-venus-mars fa-3x"></i>
+  <i class="fa-solid fa-venus-mars" style="font-size:5em;"></i>
+</body>
+
+</html>

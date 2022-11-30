@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UPLOAD</title>
+</head>
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+	integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+	crossorigin="anonymous"></script>
+
+<body>
+ 
+		<style>
+	.upload-box {
+	width: 90%;
+	height: 300px;
+	margin: 10px auto;
+	border: 5px dashed lightgray;
+	padding: 10px;
+	position: relative;
+}
+
+.plus {
+	font-size: 7em;
+	color: lightgray;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+}
+
+#preview {
+	width: 90%;
+	margin: 10px auto;
+	border: 2px dotted lightgray;
+	padding: 10px;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+ 
+img {
+	width: 150px;
+	height: 150px;
+	border: 1px dashed gray;
+	border-radius: 25%;
+	margin: 10px;
+}
+
+ 
+</style>
+
+		<div class="upload-box">
+			<div class="plus">+</div>
+		</div>
+		<div id="preview"></div>
+</body>
+
+<script>
+	/* 유효성 체크  */
+	function isValid(data) {
+		//파일인지 유효성 검사
+		if (data.types.indexOf('Files') < 0)
+			return false;
+
+		//이미지인지 유효성 검사
+		if (data.files[0].type.indexOf('image') < 0) {
+			alert('이미지 파일만 업로드 가능합니다.');
+			return false;
+		}
+
+		//파일의 개수는 1개씩만 가능하도록 유효성 검사
+		if (data.files.length > 1) {
+			alert('파일은 하나씩 전송이 가능합니다.');
+			return false;
+		}
+
+		//파일의 사이즈는 50MB 미만
+		if (data.files[0].size >= 1024 * 1024 * 50) {
+			alert('50MB 이상인 파일은 업로드할 수 없습니다.');
+			return false;
+		}
+		return true;
+	}
+	function RequestUpload() {
+		//전송하기 
+		$.ajax({
+			type : 'POST',
+			enctype : 'multipart/form-data',
+			url : '/Upload/RequestUpload',
+			data : formData,
+			processData : false,
+			contentType : false,
+			success : function(result) {
+				alert("Success!!");
+			} 		 
+		});
+	}
+</script>
+<script> 
+	var uploadBox = document.querySelector('.upload-box');
+	const formData = new FormData();
+
+	/* 박스 안에 Drag 들어왔을 때 */
+	uploadBox.addEventListener('dragenter', function(e) {
+		console.log('dragenter');
+	});
+
+	/* 박스 안에 Drag를 하고 있을 때 */
+	uploadBox.addEventListener('dragover', function(e) {
+		e.preventDefault();
+
+		var vaild = e.dataTransfer.types.indexOf('Files') >= 0;
+
+		if (!vaild) {
+			this.style.backgroundColor = 'red';
+		} else {
+			this.style.opacity = 0.5;
+		}
+	});
+
+	/* 박스 밖으로 Drag가 나갈 때 */
+	uploadBox.addEventListener('dragleave', function(e) {
+		console.log('dragleave');
+
+		this.style.opacity = 1;
+
+	});
+
+	/* 박스 안에서 Drag를 Drop했을 때 */
+	uploadBox.addEventListener('drop', function(e) {
+
+		e.preventDefault();
+
+		//		console.log('drop');
+		//		console.dir(e.dataTransfer);
+		var data = e.dataTransfer.files[0];
+		//		console.dir(data);
+
+		//유효성 Check
+		if (!isValid(e.dataTransfer))
+			return;
+
+		//Preview
+		let reader = new FileReader();
+		reader.readAsDataURL(data);
+		reader.onload = function(event) {
+			$('#preview').append("<img src="+event.target.result+" />");
+		};
+
+		//전송하기
+
+		formData.append('uploadfiles', data);
+
+	});
+</script>
+
+
+</html>

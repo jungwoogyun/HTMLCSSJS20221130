@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  </script>
+</head>
+
+<body>
+
+  <form action="join.jsp" method="post">
+    <div>
+      <label for="userid">ID</label>
+      <input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요." required oninvalid="this.setCustomValidity('좀입력좀해라쫌..');" onchange="this.setCustomValidity('')">
+    </div>
+    <div>
+      <label for="pwd">PW</label>
+      <input type="password" name="pwd" id="pwd" placeholder="패스워드를 입력하세요" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$^&*]).{8,16}" required oninvalid="this.setCustomValidity('패스워드를 잘못 입력하셨습니다.')"   onchange="this.setCustomValidity('')">
+    </div>
+    <div>
+      <label for="email">MAIL</label>
+      <input type="email" name="email" id="email" placeholder="example@example.com" disabled>
+    </div>
+    <div>
+      <label for="gender">GENDER</label>
+      <input type="radio" name="gender" value="M">남
+      <input type="radio" name="gender" value="W">여
+    </div>
+    <div>
+      <label for="">HOBBY</label>
+      <input type="checkbox" name="hobby" value="climing" id="climing"><label for="climing">등산</label>
+      <input type="checkbox" name="hobby" value="golf" id="golf"><label for="golf">골프</label>
+      <input type="checkbox" name="hobby" value="swimming" id="swimming"><label for="swimming">수영</label>
+    </div>
+    <div>
+      <label for="">memo</label><br>
+      <textarea name="memo" id="" cols="30" rows="10" style="resize:none;"></textarea>
+    </div>
+    <div>
+      <label for="">TEL</label>
+      <select name="tel1">
+        <option value="053">053</option>
+        <option value="055">055</option>
+        <option value="02">02</option>
+      </select>
+      - <input type="text" name="tel2">
+      - <input type="text" name="tel3">
+      
+
+    </div>
+
+    <div>
+      <input type="submit" value="회원가입">
+    </div>
+  </form>
+
+</body>
+
+</html>
