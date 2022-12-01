@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    #a1 {
+      display: block;
+      width: 100px;
+      height: 35px;
+      background-color: tomato;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 35px;
+    }
+
+    #a2 {
+      display: block;
+      width: 100px;
+      height: 35px;
+      background-color: orange;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 35px;
+    }
+
+    /* Mouse over */
+    #a1:hover {
+      opacity: 0.7;
+    }
+
+    /* 클릭하고 있을때 */
+    #a1:active {
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+
+    /* 한번 이상의 클릭 이벤트가 발생했을때 */
+    #a1:visited {
+      color: gray;
+    }
+
+    /* 한번도 클릭이벤트가 발생하지 않은경우(기본값) */
+    a:link {
+      color: blueviolet;
+    }
+
+    #txt {
+      border: 1px solid orange;
+       
+    }
+
+    #txt:focus {
+      border: 1px;
+      outline: 0px;
+      border: 1px solid transparent;   
+      border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
+      border-image-slice: 1;
+    }
+
+
+    /* 참고 */
+    div {
+      width:0px;
+      transition: 0.5s;
+      border-bottom: 1px solid;
+    }
+
+    div:hover {
+      width: 200px;
+      border-bottom: 1px solid transparent;
+      border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
+      border-image-slice: 1;
+    }
+    /* 참고 */
+
+    input[type="checkbox"]:checked+label{
+      background-color:green;
+      color:white;
+    }
+
+    /* 체크박스 체크시 텍스트필드 비활성화 */
+    input[type='text']:disabled{
+      background-color:beige;
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  <a href="#" id="a1">TEST</a>
+  <a href="#" id="a2">TEST</a>
+  <a href="">TEST</a>
+  <hr>
+  <input id="txt">
+  <hr>
+  <div><input type="text" style="outline:0px;border:0px;"></div>
+  <hr>
+  <section>
+    <input type="checkbox"><label>체크박스</label>
+  </section>
+  <hr>
+
+  <input type="checkbox" id="chk2">
+  <input type="text" id="txt2" disabled>
+
+</body>
+  <script>
+      chktg= document.getElementById("chk2");  
+      txttg = document.getElementById("txt2");    
+      chktg.addEventListener('change',function(){
+        if(this.checked){
+          //텍스트 활성화
+          txttg.disabled=false;
+        }else{
+          //텍스트 비활성화
+          txttg.value="";
+          txttg.disabled=true;
+        }
+      })
+  </script>
+
+</html>

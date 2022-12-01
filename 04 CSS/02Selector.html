@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* > : 자식선택자-depth 1에 해당되는 자식만 선택*/
+    .parent>div{
+      background-color : orange;
+    }
+    .parent>.child{
+      border : 2px solid gray;
+    }
+    .parent>p{
+      font-family:'바탕체';
+    }
+    /*   : 자손선택자-하위 모든자식 선택 */
+    .parent div{
+      letter-spacing: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">
+      <div>1 HELLO WORLD</div>
+      <div class="child">2 HELLO WORLD</div>
+      <div>3 HELLO WORLD</div>
+    </div>
+    <div>
+      4 HELLO WORLD
+    </div>
+    <p>5 HELLO WORLD</p>
+  </div>
+
+</body>
+</html>

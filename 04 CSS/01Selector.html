@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* * :전체선택자  */
+    *{
+      font-family: '바탕체';
+    }
+    /* h1 : 요소선택자,태그명 입력 */
+    h1{
+      color : red;
+    }
+    /* t1 : 아이디 선택자, id명 앞에 #  */
+    #t1{
+      color : green;
+    }
+    /* t2 : 클래스 선택자, class명 앞에 . */
+    .t2{
+      color : orange;
+    }
+    /* , : 그룹선택자 , 여러 선택자들에 동시적용 */
+
+    h1,#t1{
+      background-color :aquamarine;
+    }
+   
+  </style>
+</head>
+<body>
+  
+  <h1>HELLO WORLD</h1>
+  <h2 id="t1">HELLO WORLD</h2>
+  <h3 class="t2">HELLO WORLD</h3>
+  <h4 class="t2">HELLO WORLD</h4>
+  <h5 class="t2">HELLO WORLD</h5>
+</body>
+</html>
