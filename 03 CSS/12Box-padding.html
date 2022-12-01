@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      background-color: orange;
+    }
+    #d1{
+      width : 300px;
+      height : 300px;      
+      padding-top:10px;
+      padding-left : 50px;
+      padding-right : 30px;
+      padding-bottom : 100px;
+      /* box-sizing: border-box; */
+    }
+    .parent{
+      width : 500px;
+      height : 500px;
+      background-color:green;
+    }
+    .child{
+      width : 200px;
+      height : 200px;
+      background-color:royalblue;
+      padding-top : 50px;
+      padding-left : 60px;
+      padding-right : 500px;
+      padding-bottom : 100px;
+    }
+    .d2{
+      width : 100px;
+      height : 100px;
+    }
+    .d2{
+      /* top right bottom left */
+      /* padding : 10px 20px 30px 40px; */
+      
+      /* padding : 10px 20px 30px; */
+
+      /* padding : 10px 20px; */
+
+      /* auto : 0 적용 안됨 */
+      padding : 10px auto;
+
+    }
+  </style>
+</head>
+<body>
+  
+    <div id="d1">Hello World</div>
+    <hr>
+    <div class="parent">
+      <div class="child">HELLO</div>
+    </div>
+    <hr>
+    <div class="d2"></div>
+    <div class="d2"></div>
+</body>
+</html>
