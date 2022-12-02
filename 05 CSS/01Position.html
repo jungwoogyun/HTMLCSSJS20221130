@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height:3000px;
+    }
+    div{
+      width:200px;
+      height:200px;
+      border : 1px solid gray;
+      position:static;
+      font-size:3rem;
+    }
+    #d1{
+      /* position:relative; */
+      /* position:absolute; */
+      position:fixed;
+      background:orange;
+      left:50%;
+      
+     
+     
+    }
+    #d2{
+      /* position:relative; */
+     position:absolute;
+     left:30%;
+     top:50%;
+     
+    }
+    #d3{
+      /* position:relative; */
+      
+    }
+    #d4{
+      /* position:relative; */
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    position : 박스의 위치(block태그 기준)를 지정할때 사용하는 속성
+    static(기본) : viewport를 기준으로 수직으로 순서대로 연결(상대위치)
+    relative : 특정 HTML요소를 기본위치로 잡고 그 위치를 기준으로 현재 박스 위치를 지정(상대위치)
+    absolute : 특정 HTML요소를 기본위치로 잡고 그 위치를 기준으로 현재 박스 위치를 지정(상대위치-상위태그가 없을시 viewport가 기준)
+    fixed : viewport를 기준으로 연결(절대위치)
+   -->
+   <div id="d1">d1</div>
+   <div id="d2">d2</div>
+   <div id="d3">d3</div>
+   <div id="d4">d4</div>
+
+</body>
+</html>
