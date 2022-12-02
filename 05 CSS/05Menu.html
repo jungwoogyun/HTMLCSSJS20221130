@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0px;
+      border: 1px solid gray;
+      
+      text-align:center;
+    }
+    .menu{
+        width:500px;
+    }
+    .menu>li{
+      width:200px;
+    }
+    .menu>li>a{
+      display:block;
+      border:1px solid red;
+    }
+    .submenu{
+      display:none;
+    }
+    .menu>li:hover .submenu{
+      display:block;
+    }
+
+    .menu>li{
+      position:relative;
+    }
+    .submenu{
+      position:absolute;
+      left:200px;
+      top:0px;
+    }
+    
+    .submenu2{
+      display:none;
+      position:absolute;
+      left:85px;
+      top:-1px;
+    }
+    .submenu>li:hover .submenu2{
+      display:block;
+    }
+    .submenu>li{
+      position:relative;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+
+  <ul class="menu">
+    <li>
+      <a href="">MENU1</a>
+      <ul class="submenu">
+        <li>
+          <a href="">SUBMENU1</a>
+          <ul class="submenu2">
+            <li>SUBMENU21</li>
+            <li>SUBMENU22</li>
+            <li>SUBMENU23</li>
+            <li>SUBMENU24</li>
+            <li>SUBMENU25</li>
+            <li>SUBMENU26</li>
+            <li>SUBMENU27</li>
+            <li>SUBMENU28</li>
+          </ul>
+        </li>
+        <li>
+          <a href="">SUBMENU1</a>
+          <ul class="submenu2">
+            <li>SUBMENU21</li>
+            <li>SUBMENU22</li>
+            <li>SUBMENU23</li>
+            <li>SUBMENU28</li>
+          </ul>
+        </li>
+        <li>
+          <a href="">SUBMENU3</a>
+          <ul class="submenu2">
+            <li>SUBMENU21</li>
+            <li>SUBMENU22</li>
+            <li>SUBMENU23</li>
+            <li>SUBMENU24</li>
+            <li>SUBMENU25</li>
+            <li>SUBMENU26</li>
+            <li>SUBMENU27</li>
+            <li>SUBMENU28</li>
+            <li>SUBMENU26</li>
+            <li>SUBMENU27</li>
+            <li>SUBMENU28</li>
+          </ul>
+        </li>
+      </ul>
+  
+    </li>
+    <li>
+      <a href="">MENU2</a>
+      <ul class="submenu">
+        <li><a href="">SUBMENU1</a></li>
+        <li><a href="">SUBMENU1</a></li>
+        <li><a href="">SUBMENU3</a></li>
+      </ul>
+    </li>
+ 
+  </ul>
+
+</body>
+
+</html>
