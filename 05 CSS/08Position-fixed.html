@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- reset.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <style>
+    body {
+      height: 3000px;
+      background-color: orange;;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 50px;
+      border: 1px solid gray;
+    }
+
+    .submenu {
+      display: none;
+    }
+
+    .menu>li:hover .submenu {
+      display: block;
+    }
+
+    .menu>li {
+      position: relative;
+    }
+
+    .submenu {
+      position: absolute;
+      left: 0px;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      background-color: white;
+    }
+
+    #ball{
+      width : 100px;
+      height : 100px;
+      border-radius: 50%;
+      background-color: azure;
+      box-shadow: 5px 5px 5px 0;
+      position:fixed;
+      left:80%;
+      top:75%;
+       
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="">MENU1</a>
+          <ul class="submenu">
+            <li>SUBMENU1</li>
+            <li>SUBMENU2</li>
+            <li>SUBMENU3</li>
+          </ul>
+        </li>
+        <li>
+          <a href="">MENU2</a>
+          <ul class="submenu">
+            <li>SUBMENU1</li>
+            <li>SUBMENU2</li>
+            <li>SUBMENU3</li>
+          </ul>
+        </li>
+        <li>
+          <a href="">MENU3</a>
+          <ul class="submenu">
+            <li>SUBMENU1</li>
+            <li>SUBMENU2</li>
+            <li>SUBMENU3</li>
+          </ul>
+        </li>
+        <li>
+          <a href="">MENU4</a>
+          <ul class="submenu">
+            <li>SUBMENU1</li>
+            <li>SUBMENU2</li>
+            <li>SUBMENU3</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div id="ball"></div>
+</body>
+
+</html>

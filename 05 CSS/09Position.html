@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+    height : 1500px;
+    }
+    div{
+      border : 1px solid gray;
+      height: 30px;
+      width:50px;
+    }
+    #box {
+      width: 500px;
+      height: 500px;
+      border: 1px solid gray;
+      display:flex;
+      justify-content:space-evenly;
+      position:relative;
+    
+    }
+    #d1{position:relative;}
+    #d2{position:absolute;}
+    #d3{position:sticky;top:0px;}
+    #d4{position:fixed; left: 400px;}
+  </style>
+</head>
+
+<body>
+
+  <div id="box">
+      <div id="d1">Relative</div>
+      <div id="d2">Absolute</div>
+      <div id="d3">Sticky</div>
+      <div id="d4">Fixed</div>
+  </div>
+  
+</body>
+
+</html>

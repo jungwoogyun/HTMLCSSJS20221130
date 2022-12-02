@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Document</title>
   <style>
-    /* *{
+    *{
       text-align:center;
       font-family:'맑은 고딕';
     }
@@ -18,6 +19,8 @@
     }
     a{
       display:block;
+      width:100%;
+      text-align:left;
     }
     .gnbDepth1{
       display:flex;
@@ -37,7 +40,7 @@
     }
     
     .gnbDepth1>li:hover .gnbDepth2{
-      display:flex;
+      display:block;
       
     }
     .gnb2-tit{
@@ -52,9 +55,7 @@
     .gnbDepth1{
       position:relative;
     }
-    .gnbDepth1>li{
-      
-    }
+   
     .gnbDepth2{
       position:absolute;
       
@@ -62,7 +63,8 @@
       width:1000px;
       height:64px;
       line-height:64px;
-      border:1px solid gray;
+      
+      text-align:left;
     }
     .gnbDepth2-list>li>a{
       display:block;
@@ -70,8 +72,11 @@
       color:black;
      
       
-    } */
+    } 
 
+
+    /* 가져온 스타일 원본 */
+/*     
     ul{
       list-style:none;
     }
@@ -79,75 +84,7 @@
       text-decoration: none;
       color:black;
     }
-    #gnbTop {
-      min-height: 42px;
-      padding-top: 5px;
-      border-bottom: 1px solid #e3e3e3;
-      font-size: 13px;
-    }
-
-    #gnbTop .container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .brcList {
-      display: flex;
-      position: absolute;
-      left: 50%;
-      top: 5px;
-      transform: translateX(-50%);
-    }
-
-    .brcList>li {
-      padding: 8px 12px 0;
-      color: #6C757D;
-      font-size: 13px;
-    }
-
-    .brcList>li.on {
-      font-weight: 700;
-      color: #0026CA;
-      background: none;
-    }
-
-    #gnbTop .right-box {
-      display: flex;
-      align-items: center;
-      padding: 2px 0;
-      color: #6C757D;
-    }
-
-    .goStudy {
-      display: flex;
-      align-items: center;
-      height: 28px;
-      padding: 0 7px;
-      margin-right: 15px;
-      border: 1px solid #6C757D;
-      border-radius: 7px;
-    }
-
-    .gnb-recBtn {
-      display: flex;
-      align-items: center;
-      height: 28px;
-      padding: 0 7px;
-      margin-right: 7px;
-      border: 1px solid #6C757D;
-      border-radius: 7px;
-    }
-
-    .mbMenu {
-      display: flex;
-    }
-
-    .mbMenu>li:not(:last-child):after {
-      content: '/';
-      display: inline-block;
-      padding: 0 10px;
-    }
-
+  
     #gnb {
       display: flex;
       position: relative;
@@ -263,6 +200,7 @@
       font-size: 20px;
       display: none;
     }
+    */
   </style>
 </head>
 
