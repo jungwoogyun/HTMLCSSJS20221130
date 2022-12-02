@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* *{
+      text-align:center;
+      font-family:'맑은 고딕';
+    }
+    ul{
+      list-style:none;
+      padding-left:0px;
+   
+    }
+    a{
+      display:block;
+    }
+    .gnbDepth1{
+      display:flex;
+      justify-content: space-around;
+      width:1200px;
+      text-align:left;
+    }
+    .gnbDepth2{
+      display:none;
+    }
+    .gnbDepth1>li>a{
+      display:block;
+      text-decoration: none;
+      color:black;
+      font-weight:700;
+       
+    }
+    
+    .gnbDepth1>li:hover .gnbDepth2{
+      display:flex;
+      
+    }
+    .gnb2-tit{
+      display:none;
+    }
+    .gnbDepth2-list{
+      display:flex;
+      justify-content: space-around;
+      width:1200px;
+    }
+    
+    .gnbDepth1{
+      position:relative;
+    }
+    .gnbDepth1>li{
+      
+    }
+    .gnbDepth2{
+      position:absolute;
+      
+      left:0px;
+      width:1000px;
+      height:64px;
+      line-height:64px;
+      border:1px solid gray;
+    }
+    .gnbDepth2-list>li>a{
+      display:block;
+      text-decoration: none;
+      color:black;
+     
+      
+    } */
+
+    ul{
+      list-style:none;
+    }
+    a{
+      text-decoration: none;
+      color:black;
+    }
+    #gnbTop {
+      min-height: 42px;
+      padding-top: 5px;
+      border-bottom: 1px solid #e3e3e3;
+      font-size: 13px;
+    }
+
+    #gnbTop .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .brcList {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      top: 5px;
+      transform: translateX(-50%);
+    }
+
+    .brcList>li {
+      padding: 8px 12px 0;
+      color: #6C757D;
+      font-size: 13px;
+    }
+
+    .brcList>li.on {
+      font-weight: 700;
+      color: #0026CA;
+      background: none;
+    }
+
+    #gnbTop .right-box {
+      display: flex;
+      align-items: center;
+      padding: 2px 0;
+      color: #6C757D;
+    }
+
+    .goStudy {
+      display: flex;
+      align-items: center;
+      height: 28px;
+      padding: 0 7px;
+      margin-right: 15px;
+      border: 1px solid #6C757D;
+      border-radius: 7px;
+    }
+
+    .gnb-recBtn {
+      display: flex;
+      align-items: center;
+      height: 28px;
+      padding: 0 7px;
+      margin-right: 7px;
+      border: 1px solid #6C757D;
+      border-radius: 7px;
+    }
+
+    .mbMenu {
+      display: flex;
+    }
+
+    .mbMenu>li:not(:last-child):after {
+      content: '/';
+      display: inline-block;
+      padding: 0 10px;
+    }
+
+    #gnb {
+      display: flex;
+      position: relative;
+      height: 65px;
+      border-bottom: 1px solid #d4d4d4;
+    }
+
+    #gnb>.container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: none;
+    }
+
+    .topLogo {
+      display: inline-block;
+      width: 140px;
+      height: 85px;
+    }
+
+    .topLogo a {
+      display: block;
+      height: 100%;
+      text-indent: -9999px;
+      background-image: url('/renewal2021/img/common/logo_header.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    .gnbDepth1 {
+      display: flex;
+      margin-right: 0px;
+      font-size: 16px;
+    }
+
+    .gnbDepth1>li {
+      padding: 0 20px;
+      font-weight: 700;
+      min-width: fit-content;
+    }
+
+    .gnbDepth1>li:nth-child(1) {
+      padding-left: 0;
+    }
+
+    .gnbDepth1>li:hover .gnbDepth2 {
+      display: block;
+    }
+
+    .gnbDepth1>li.on,
+    .gnbDepth1>li:hover {
+      color: #004eff;
+    }
+
+    .gnbDepth1>li.on>a,
+    .gnbDepth1>li:hover>a {
+      border-bottom: 3px solid;
+    }
+
+    .gnbDepth1>li>a {
+      display: flex;
+      align-items: center;
+      height: 65px;
+      padding: 0 3px;
+    }
+
+    .gnbDepth2 {
+      display: none;
+      position: absolute;
+      top: 101%;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      width: 100%;
+      padding: 22px 0 22px;
+      background: #fff;
+      color: #000001;
+      box-shadow: 0px 11px 10px 0px rgba(13, 14, 21, 0.2);
+      -webkit-box-shadow: 0px 11px 10px 0px rgba(13, 14, 21, 0.2);
+      -moz-box-shadow: 0px 11px 10px 0px rgba(13, 14, 21, 0.2);
+    }
+
+    .gnbDepth2>.container {
+      display: flex;
+      align-items: center;
+      overflow: inherit;
+    }
+
+    .gnbDepth2-list {
+      display: flex;
+      justify-content: space-between;
+      width: 77%;
+      font-size: 16px;
+    }
+
+    .gnbDepth2-list>li {
+      font-weight: 400;
+      margin-left: 2px;
+    }
+
+    .gnbDepth2-list>li:hover {
+      color: #004eff;
+    }
+
+    .gnbDepth2-list>li>a {
+      vertical-align: middle;
+    }
+
+    .gnb2-tit {
+      width: 200px;
+      font-weight: 700;
+      font-size: 20px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div id="gnb">
+    <div class="container">
+      <nav>
+        <ul class="gnbDepth1">
+          <li>
+            <a href="javascript:void(0)">아카데미소개</a>
+            <div class="gnbDepth2">
+              <div class="container">
+                <p class="gnb2-tit">아카데미소개</p>
+                <ul class="gnbDepth2-list">
+                  <li><a href="/renewal2021/academy/centerinfo.asp">코리아IT 소개</a></li>
+                  <li><a href="/renewal2021/academy/history.asp">히스토리</a></li>
+                  <li><a href="/renewal2021/academy/press.asp">언론보도</a></li>
+                  <li><a href="/renewal2021/academy/teacher.asp">강사소개</a></li>
+                  <li><a href="/renewal2021/academy/facility.asp">교육시설안내</a></li>
+                  <li><a href="/renewal2021/academy/location.asp">오시는 길</a></li>
+                  <li><a href="/renewal2021/academy/system.asp">학생관리시스템</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0)">IT 교육과정</a>
+            <div class="gnbDepth2">
+              <div class="container">
+                <p class="gnb2-tit">IT 교육과정</p>
+                <ul class="gnbDepth2-list">
+                  <li>
+                    <a href="/renewal2021/curriculum/curri_itbasic.asp">기초 코딩</a>
+                  </li>
+                  <li>
+                    <a href="/renewal2021/curriculum/curri_web.asp">웹/앱개발</a>
+                  </li>
+                  <li>
+                    <a href="/renewal2021/curriculum/curri_bigdata.asp">빅데이터·AI</a>
+                  </li>
+                  <li>
+                    <a href="/renewal2021/curriculum/curri_security.asp">정보보안 전문가</a>
+                  </li>
+                  <li>
+                    <a href="/renewal2021/curriculum/curri_skill.asp">스킬업 단과</a>
+                  </li>
+                  <li>
+                    <a href="/renewal2021/curriculum/curri_license.asp">자격증 과정</a>
+                  </li>
+                  <li>
+                    <a href="/renewal2021/curriculum/curri_network.asp">네트워크 관리자</a>
+                  </li>
+                  <li>
+                    <a href="/renewal2021/curriculum/curri_server.asp">서버 관리자</a>
+                  </li>
+                  <li>
+                    <a href="/renewal2021/curriculum/curri_school.asp">강사취업사관학교</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0)">국비지원 과정</a>
+            <div class="gnbDepth2">
+              <div class="container">
+                <p class="gnb2-tit">국비지원과정</p>
+                <ul class="gnbDepth2-list">
+                  <li><a href="/renewal2021/gookbi/gookbiMain.asp">국비지원 교육과정</a></li>
+                  <li><a href="/renewal2021/gookbi/gookbi_employ.asp">실업자 국비과정 안내</a></li>
+                  <li><a href="/renewal2021/gookbi/worker.asp">재직자 국비과정 안내</a></li>
+                  <li><a href="/renewal2021/gookbi/schoolMain.asp">과정평가형 과정 </a></li>
+                  <li><a href="/renewal2021/gookbi/digitalTraining.asp">신사업 국비과정</a></li>
+                  <li><a href="/renewal2021/gookbi/gookbi_customer.asp">국비지원과정 조회하기</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0)">커뮤니티</a>
+            <div class="gnbDepth2">
+              <div class="container">
+                <p class="gnb2-tit">커뮤니티</p>
+                <ul class="gnbDepth2-list">
+                  <li><a href="/renewal2021/job/interview.asp">취업생 인터뷰</a></li>
+                  <li><a href="/renewal2021/community/interview.asp">수강생 인터뷰</a></li>
+                  <li><a href="/renewal2021/community/teacher.asp">강사 인터뷰</a></li>
+                  <li><a href="/renewal2021/community/post.asp">수강생 후기</a></li>
+                  <li><a href="/renewal2021/community/photo.asp">포토스토리</a></li>
+                  <li><a href="/renewal2021/community/notice.asp">공지사항</a></li>
+                  <li><a href="/renewal2021/community/seminar.asp">특강&amp;세미나</a></li>
+                  <li><a href="/renewal2021/community/tv.asp">영상으로 보는 IT</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0)">프로젝트</a>
+            <div class="gnbDepth2">
+              <div class="container">
+                <p class="gnb2-tit">프로젝트</p>
+                <ul class="gnbDepth2-list">
+                  <li><a href="/renewal2021/community/project.asp">프로젝트 작품</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0)">취업지원센터</a>
+            <div class="gnbDepth2">
+              <div class="container">
+                <p class="gnb2-tit">취업지원센터</p>
+                <ul class="gnbDepth2-list">
+                  <li><a href="/renewal2021/job/job_system.asp">취업프로그램</a></li>
+                  <li><a href="/renewal2021/job/korea_recruit.asp">코리아추천특채전형</a></li>
+                  <li><a href="/renewal2021/job/job_list.asp">취업현황</a></li>
+                  <li><a href="/renewal2021/job/recruit.asp">채용정보</a></li>
+                  <li><a href="/renewal2021/job/simulation.asp">실전 모의면접</a></li>
+                  <li><a href="/renewal2021/mou/list.asp">산학협력 현황</a></li>
+                  <li><a href="/renewal2021/job/license.asp">자격증정보</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:void(0)">고객상담센터</a>
+            <div class="gnbDepth2">
+              <div class="container">
+                <p class="gnb2-tit">고객상담센터</p>
+                <ul class="gnbDepth2-list">
+                  <li><a href="/renewal2021/customer/center_tuition.asp">수강료조회</a></li>
+                  <li><a href="/renewal2021/customer/center_fit.asp">내게 맞는 교육과정 찾기</a></li>
+                  <li><a href="/renewal2021/customer/center_online.asp">실시간방문예약</a></li>
+                  <li><a href="/renewal2021/customer/center_timetable.asp">시간표조회</a></li>
+                  <li><a href="/renewal2021/customer/center_location.asp">지점별위치조회</a></li>
+                  <!--li><a href="/renewal2021/customer/pay01.asp">온라인결제</a></li-->
+
+                  <li><a href="javascript:void(0);" onclick="payPopUp('03',14);">온라인결제</a></li>
+
+                  <!--li><a href="/renewal2021/customer/pay01.asp">온라인결제</a></li-->
+
+                  <li><a href="/renewal2021/customer/center_suggest.asp">고객 칭찬/불편 접수</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
