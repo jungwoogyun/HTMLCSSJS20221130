@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      border :1px solid;
+    }
+    .parent1{
+      height:50px;
+      /* 기본값 : 내부 items 가로배치 */
+      display:flex;
+      /* items 방향 지정 : row,row-reverse,column,column-reverse */
+      flex-direction: row;
+      /* items 수평 배치 형태 */
+      justify-content:space-evenly;
+      /* items 수직 배치 형태 */
+      align-items:center;
+    }
+    .parent1>.child{
+      height:30px;
+    }
+    /* ---------------------------------------------------------------- */
+    .parent2{
+      height:500px;
+      /* 기본값 : 내부 items 가로배치 */
+      display:flex;
+      /* items 방향 지정 : row,row-reverse,column,column-reverse */
+      flex-direction: row;
+      /* items 수평 배치 형태 */
+      justify-content:space-evenly;
+      /* items 수직 배치 형태 */
+      align-items:center;
+
+      /* items 줄바꿈하기 */
+      flex-wrap :wrap;
+      /* 교차축 정렬방식, wrap 설정 이후 사용 가능 */
+      align-content:stretch;
+    }
+    .parent2>.child{
+      /* height:30px; */
+      width:150px;
+    }
+
+    .parent2>.child:nth-child(1){
+      align-self:flex-end;
+    }
+    .parent2>.child:nth-child(2){
+      align-self:flex-start;
+    }
+    .parent2>.child:nth-child(3){
+      align-self:stretch;
+    }
+    
+  </style>
+</head>
+<body>
+  
+  <div class="parent1">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+  </div>
+  <hr>
+  <div class="parent2">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+    <div class="child">6</div>
+    <div class="child">7</div>
+    <div class="child">8</div>
+    <div class="child">9</div>
+    <div class="child">10</div>
+    <div class="child">11</div>
+    <div class="child">12</div>
+  </div>
+</body>
+</html>
