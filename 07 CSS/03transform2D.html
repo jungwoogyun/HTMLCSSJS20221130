@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div{
+      width : 200px;
+      height : 200px;
+      border : 1px solid;
+      margin:150px;
+      background:orange;
+      transition:1s;
+    }
+    div:hover{
+      /* translate(x,y) :x,y축 거리만큼 이동 */
+      /* transform:translate(150px,150px); */
+      
+      /* rotate(deg) : deg만큼 회전 */
+      /* transform:rotate(45deg); */
+
+      /* scale : 확대 */
+      /* transform : scale(2,2); */
+
+      /* skew : 기울이기 */
+      /* transform:skew(20deg,20deg); */
+      transform : translate(150px,150px) rotate(45deg) scale(2,2) skew(20deg,20deg);
+     
+    }
+  </style>
+</head>
+<body>
+
+
+  <div></div>
+  
+</body>
+</html>
