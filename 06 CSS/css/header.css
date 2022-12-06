@@ -1,0 +1,16 @@
+header{
+  height:40px;
+  border:1px solid gray;
+  display:flex;
+  justify-content:space-between;
+  align-items : center;
+  margin-bottom : 5px;
+}
+header>#logo{}
+header img{}
+
+header>ul{
+  width:400px;
+  display:flex;
+  justify-content: space-between;
+}
