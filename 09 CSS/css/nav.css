@@ -42,19 +42,32 @@ nav>.rightmenu{
 
 
 /* MediaQuery 적용 위한 추가 CSS */
+nav span{
+  font-size:2rem;
+}
+
 nav .leftmenu,.rightmenu{
   font-size:2rem;
   display:flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   
 }
 nav .rightmenu{
   justify-content:space-between;
 }
-nav span{
-  font-size:2rem;
+
+nav>.leftmenu>.search{
+  position:relative;
+  /* border : 1px solid gray; */
+  width : 200px;
+  align-self:stretch;
+  display:flex;
+  align-items: center;
+  transition:1s;
+  margin-left:100px;
 }
+
 nav>.leftmenu>.search>input{
   width :0px;
   height : 40px;
@@ -65,18 +78,9 @@ nav>.leftmenu>.search>input{
   padding-left:35px;
   font-size:18px;
   transition: .4s;
+ 
   position:relative;
   
-   
-}
-nav>.leftmenu>.search{
-  position:relative;
-  /* border : 1px solid gray; */
-  width : 200px;
-  align-self:stretch;
-  display:flex;
-  align-items: center;
-  transition:1s;
 }
 nav>.leftmenu>.search>input:focus{
   width : 250px;
@@ -103,4 +107,35 @@ nav .rightmenu>div:nth-child(1){
 }
 nav .rightmenu>div:nth-child(2){
   flex-grow:0;
+}
+
+/* MediaQuery 적용 */
+
+@media all and (max-width:1024px){
+  nav span{
+    display:none;
+  }
+}
+
+@media all and (max-width:768px){
+  nav .leftmenu>.search{
+    display:none;
+  }
+  nav .rightmenu{
+    display: none;
+  }
+  nav{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+     
+  }
+  nav .leftmenu{
+    display:flex;
+    justify-content: center;
+  }
+  nav .center{
+    width:0px;
+  }
+  header{display:none;}
 }
