@@ -1,0 +1,106 @@
+nav{
+  height :100px;
+  border : 1px solid gray;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:5px;
+}
+nav > *{
+  /* border : 1px solid gray; */
+  height:50px;
+  flex: 1 0 300px;
+}
+nav>.leftmenu{
+  flex-grow: 2;
+}
+nav>.center{
+  flex-grow: 1;
+  align-self: stretch;
+  height:100%;
+  
+  /* flex 로고 중앙 배치 */
+  /* display:flex;
+  justify-content: center;
+  align-items: center; */
+  
+  /* position 로고 중앙배치 */
+  position:relative;
+}
+nav  img{
+  width : 80px; height : 80px;
+  /* border : 1px solid gray; */
+  display:block;
+  position:absolute;
+  top:0px; bottom:0px;
+  left:0px;right:0px;
+  margin:auto;
+}
+nav>.rightmenu{
+  flex-grow: 2;
+}
+
+
+/* MediaQuery 적용 위한 추가 CSS */
+nav .leftmenu,.rightmenu{
+  font-size:2rem;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+nav .rightmenu{
+  justify-content:space-between;
+}
+nav span{
+  font-size:2rem;
+}
+nav>.leftmenu>.search>input{
+  width :0px;
+  height : 40px;
+  outline:none;
+  border : 1px solid gray;
+  border-radius: 10px;
+  padding:5px;
+  padding-left:35px;
+  font-size:18px;
+  transition: .4s;
+  position:relative;
+  
+   
+}
+nav>.leftmenu>.search{
+  position:relative;
+  /* border : 1px solid gray; */
+  width : 200px;
+  align-self:stretch;
+  display:flex;
+  align-items: center;
+  transition:1s;
+}
+nav>.leftmenu>.search>input:focus{
+  width : 250px;
+  border-radius:10px;
+  transition:.4s;
+}
+nav>.leftmenu>.search>i:hover nav>.leftmenu>.search>input{
+  width : 250px;
+  border-radius:10px;
+  transition:.4s;
+}
+nav>.leftmenu>.search>i{
+  position:absolute;
+  padding-left:2px;
+  margin:auto;
+  color:gray;
+  display:block;
+  z-index: 99;
+}
+
+nav .rightmenu>div:nth-child(1){
+  flex-grow:2;
+  text-align:center;
+}
+nav .rightmenu>div:nth-child(2){
+  flex-grow:0;
+}
