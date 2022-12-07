@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let arr = ['test1','test2',30,true,null,{name:'홍길동',age:44}]
+    console.log(typeof arr[0]);
+    console.log(typeof arr[1]);
+    console.log(typeof arr[2]);
+    console.log(typeof arr[3]);
+    console.log(typeof arr[4]);
+    console.log(typeof arr[5]);
+    console.log('For문 기본----------------');
+    for(i=0;i<arr.length;i++){
+      console.log(arr[i]);
+    }
+    console.log('forEach 1------------------');
+    arr.forEach(function(item){console.log(item)});
+    console.log('forEach 2------------------');
+    arr.forEach(item=>{console.log(item)});
+    console.log('Object형 forEach------------------');
+    let obj={key1:'value1',key2:'value2',key3:'value3',key4:'value4'}
+    Object.keys(obj).forEach((key)=>{console.log("K : " + key + " V : " + obj[key]);});
+    
+    console.log();
+    console.log(Object.values(obj));
+
+    
+
+    
+
+  </script>
+
+
+</body>
+</html>

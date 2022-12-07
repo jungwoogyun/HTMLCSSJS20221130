@@ -12,10 +12,45 @@
       margin:50px;
       margin-left:150px;
     }
-    @keyframes moving1{}
-    @keyframes moving2{}
-    .d1{}
-    .d2{}
+    @keyframes moving1{
+      0%{background:red;}
+      25%{background:orange;}
+      50%{background:yellow;}
+      75%{background:green;}
+      100%{background:blue;}
+    }
+    @keyframes moving2{
+      0%{background:red; transform:rotate(0deg);}
+      25%{background:orange;transform:rotate(45deg);}
+      50%{background:yellow; transform:rotate(90deg);}
+      75%{background:green; transform:rotate(180deg);}
+      100%{background:blue;transform:rotate(270deg);}
+    }
+    @keyframes moving3{
+      0%{background:red; transform:perspective(100px) rotateX(0deg);}
+      25%{background:orange;transform:perspective(100px) }
+      50%{background:yellow; transform:perspective(100px) rotateX(90deg);}
+      75%{background:green; transform:perspective(100px) }
+      100%{background:blue;transform:perspective(100px) rotateX(270deg);}
+    }
+    .d1{
+      animation-name:moving1;
+      animation-duration : 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    .d2{
+      animation-name:moving2;
+      animation-duration : 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    .d3{
+      animation-name:moving3;
+      animation-duration : 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
   </style>
 </head>
 <body>
@@ -23,6 +58,7 @@
 
   <div class="d1"></div>
   <div class="d2"></div>
+  <div class="d3"></div>
   
 
 </body>

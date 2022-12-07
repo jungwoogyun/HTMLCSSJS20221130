@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    보간법
+    변수,함수 호출 및 산술 표현식을 문자열에 직접 삽입할수 있는 기능
+    ${value}형식을 사용, 백틱에만 사용 가능
+   -->
+  <script>
+    let str1 ="Hello";
+    let str2 ='World';
+    let str3 = `Test ${1+2+3}`;
+    let flag = false;
+    let str4 = `Test ${flag}`;
+    let str5 = `hahaha ${str1} ${str2}`;
+
+    console.log(str1);
+    console.log(str2);
+    console.log(str3);
+    console.log(str4);
+    console.log(str5);
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+        border : 1px solid gray;
+        width : 150px;
+        height : 800px;
+        display: flex;
+        justify-content: center;
+        position:relative;
+    }
+    .box>#ball{
+      /* border : 1px solid gray; */
+      width : 100px;
+      height : 100px;
+      border-radius: 50%; 
+      background-color: orange;;
+      position:absolute;
+      top:0px;
+    }
+    @keyframes moving1 {
+      0%{top:0px; animation-timing-function: ease-in;}
+    
+      25%{top:700px;animation-timing-function: ease-out;}
+      
+      27%{ width:125px;height:75px; animation-timing-function: linear;} 
+      30%{ width:100px; height:100px; animation-timing-function: linear;} 
+      
+      50%{top:350px;animation-timing-function: ease-in;}
+      
+      75%{top:700px;animation-timing-function: ease-out;}
+      100%{top:0px;animation-timing-function: ease-in;}
+    
+    }
+    @keyframes moving2 {
+      0%  {top:0px; animation-timing-function: ease-in;width:100px;height:100px;}
+      
+      
+
+      50%{top:700px;animation-timing-function: ease-out;width:100px;height:100px;}
+      51%{width:125px;height:75px;}
+      52%{width:100px;height:100px;}
+      
+      
+    }
+    .box>#ball{
+      animation-name: moving2;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <div id="ball"></div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="poppi.sound();">뽀삐야 짖어!</button> <button onclick="poppi.toString();">뽀삐 정보</button>
+
+  <script>
+    let poppi
+    ={
+      name:'뽀삐',
+      kind:'포메라니안',
+      age : 3,
+      sound : function (){
+        alert(this.name+" 이(가) 짖습니다!!");
+      },
+      toString:function(){
+        alert("이름 : " + this.name+"\n"+"나이 : " + this.age + "\n견종 : " + this.kind);
+      }
+    }
+    // 다음 Object를 만들어서 화면에 출력합니다
+    // object명 : myCar
+    // 속성:값
+    // owner:"소유자",category="차종",fuelkind="가솔린/디젤/LPG",speed="현재속도"
+    // 기능
+    // accel : 엑셀을 밟습니다가 출력(alert)
+    // showInfo:속성정보 모두 출력(alert)
+
+
+  </script>
+  
+</body>
+</html>
