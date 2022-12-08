@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li>LIST1</li>
+    <li>LIST2</li>
+    <li>LIST3</li>
+    <li>LIST4</li>
+    <li>LIST5</li>
+    <li>LIST6</li>
+    <li>LIST7</li>
+    <li>LIST8</li>
+    <li>LIST9</li>
+    <li>LIST10</li>
+  </ul>
+  
+  <script>
+    const liEls = document.querySelectorAll('li');
+    console.log(liEls.length);
+    // 순서 바꾸기
+    liEls[6].after(liEls[5]);
+    // 노드 추가하기
+    const NewEl1= document.createElement('li');
+    NewEl1.innerHTML="BEFORE";
+    NewEl1.setAttribute("style","color : red");
+    liEls[2].before(NewEl1);//노드 앞 추가
+
+    const NewEl2= document.createElement('li');
+    NewEl2.innerHTML="AFTER";
+    NewEl2.setAttribute("style","color : orange");
+    liEls[2].after(NewEl2); //노드 뒤 추가
+
+  </script>
+  
+</body>
+</html>

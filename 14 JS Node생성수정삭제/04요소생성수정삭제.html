@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="addEl()">노드추가</button>
+  <hr>
+  
+  <div id="container">
+
+  </div>
+
+  <script>
+    let cnt=0;
+    const addEl = ()=>{
+      const ContainerEl = document.getElementById('container');//#container 태그 찾기
+      const DivEl= document.createElement('div'); //div 태그 생성
+      DivEl.innerHTML=`<h3>EL 추가!-${cnt++}</h3>`; //div 태그 안 content 저장 
+      DivEl.setAttribute('style','background-color:orange');  //속성명,속성값 
+      // ContainerEl.append(DivEl);  // 마지막에 추가
+      ContainerEl.prepend(DivEl);   //앞에 추가
+    }
+  </script>
+</body>
+</html>

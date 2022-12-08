@@ -1,0 +1,73 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  
+}
+
+
+/* 전역 설정 버튼 */
+.btn{
+
+}
+.hidden{
+
+}
+.active{
+
+}
+
+
+h1{
+  font-size:3rem;
+  font-family: sans-serif;
+}
+h4{
+  margin-bottom:5px;
+}
+
+
+.TodoContainer{
+  width : 500px;
+  height : 600px;
+  position:absolute;
+  left:0px;right:0px;
+  top:0px;bottom:0px;
+  margin:auto;
+  border : 1px solid gray;
+  padding : 10px;
+  border-radius:0 50px 0 0;
+}
+
+.TodoContainer .Title{
+  width : 100%;
+  text-align:center;
+  margin:10px auto;
+}
+
+/* Todo Header */
+.Todo__header{
+  width : 100%;
+  height : 50px;
+  border : 1px solid gray;
+  margin-bottom:5px;
+}
+
+/* Todo Body */
+.Todo__body{
+  height : 400px;
+  border : 1px solid gray;
+  padding : 10px;
+  margin-bottom:5px;
+}
+
+
+
+
+/* Todo Footer */
+.Todo__footer{
+  height:50px;
+  border : 1px solid gray;
+  margin-bottom:5px;
+
+}

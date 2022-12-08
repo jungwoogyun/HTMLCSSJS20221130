@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +17,59 @@
   <!-- js -->
   <script defer src="js/todolist.js"></script>
 </head>
+
 <body>
 
-  
-  
+
+  <div class="TodoContainer">
+    <div class="Title">
+      <h1>TO DO LIST</h1>
+    </div>
+    <!-- 적기 -->
+    <div class="Todo__header">
+
+    </div>
+    <!-- 확인 -->
+    <div class="Todo__body">
+      <!-- To do LIST -->
+      <div>
+        <div>
+          <h4>To do List</h4>
+        </div>
+        <ul class="body__Todolists">
+
+          <li>
+            <div><i class="bi bi-check-square"></i></div>
+            <div><span>할일들~~~~~~~~~~~</span></div>
+          </li>
+        </ul>
+      </div>
+      <!-- Done LIST -->
+      <div>
+        <div>
+          <h4>Done List</h4>
+        </div>
+        <ul class="body__Donelists">
+
+          <li>
+            <div><i class="bi bi-check-square"></i></div>
+            <div><span>할일들~~~~~~~~~~~</span></div>
+            <div><button>제거</button></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 부가 기능 -->
+    <div class="Todo__footer">
+      <!-- 버튼들, 정보들~ -->
+      <div>buttonToDo</div>
+      <div>Done</div>
+      <div>Clear</div>
+      <div>Clock</div>
+    </div>
+  </div>
+
+
 </body>
+
 </html>
