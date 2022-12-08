@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid gray;
+    }
+  </style>
+  <!-- 
+    JS를 이용 prompt로 row 와 col을 받아 행렬의 테이블을 만들어보세요
+    row,col은 홀수값만 받도록하세요! 
+   -->
+  <script>
+    //값입력 받기
+     let row=0;
+     let col=0;
+    while (true) {
+      row = prompt("row");
+      if ((row % 2 == 0) || isNaN(row)) {
+        alert('행값을 잘못 입력 하셨습니다.!')
+        continue;
+      }
+      col =prompt("col");
+      if ((col % 2 == 0) || isNaN(row)) {
+        alert('열값을 잘못 입력 하셨습니다.!')
+        continue;
+      }
+      break;
+    }
+    // 테이블 생성
+    let cnt=1;
+    document.write("<table>");
+    for (let i = 0; i < row; i++) {
+      document.write("<tr>");
+      for (let j = 0; j < col; j++) {
+        document.write("<td>")
+        document.write(cnt++);
+        document.write("</td>")
+      }
+      document.write("</tr>");
+    }
+    document.write("</table>");
+  </script>
+
+</body>
+
+</html>

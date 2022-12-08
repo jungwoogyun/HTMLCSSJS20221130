@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      td{
+        width:35px;
+        height:35px;
+        border : 1px solid;
+        text-align:center;
+      }
+      caption{
+        border : 1px solid;
+        height:35px;
+        line-height:35px;
+      }
+      .output{
+        display:flex;
+        flex-wrap: wrap;
+      }
+      table{
+        margin:15px;
+      }
+  </style>
+</head>
+
+<body>
+  <input class="input" type="text"><button onclick="googoo();">확인</button>
+  <hr>
+  <div class="output"></div>
+
+  <script>
+    let googoo = function () {
+      let inputEl = document.querySelector('.input');
+      let outputEl = document.querySelector('.output');
+      let dan = inputEl.value;
+      if (isNaN(dan)) {
+        alert("숫자를 입력하세요");
+        return;
+      }
+      let tblCode = '<table>';
+      tblCode+='<caption>'+dan+' 단</caption>'
+      for (i = 1; i < 10; i++) {
+        tblCode += '<tr>';
+        tblCode += '<td>'+dan+'</td>';
+        tblCode += '<td>'+i+'</td>';
+        tblCode += '<td>'+dan*i+'</td>';
+        tblCode += '</tr>'
+      }
+      tblCode += '</table>';
+      outputEl.innerHTML+=tblCode;
+    }
+  </script>
+</body>
+
+</html>
