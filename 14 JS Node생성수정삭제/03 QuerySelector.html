@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      margin:10px;
+    }
+    .btn{
+      width:100px;height:30px;
+      background-color:lightgray;
+      text-align:center;
+      line-height:30px;
+      color:white;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:700;
+      transition:0.3s;
+    }
+    .btn--style1{background-color:red;}
+    .btn--style2{background-color:orange;}
+    .btn--style3{background-color:yellow;}
+    .btn--style4{background-color:green;}
+    .btn--style5{background-color:blue;}
+    .btn--style6{background-color:darkblue;}
+    .btn--style7{background-color:blueviolet;}
+
+    .fs-xl{font-size:1.2rem;};
+
+
+  </style>
+</head>
+<body>
+
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  <div class="btn">BUTTON</div>
+  
+  <script>
+    const btnEls= document.querySelectorAll('.btn');
+    btnEls.forEach((btnEl,Idx)=>{
+      // console.log(Idx);console.log(btnEl);
+      btnEl.addEventListener('click',()=>{
+        // alert("클릭됨!!");
+        if(!btnEl.classList.contains(`btn--style${Idx+1}`))
+        {
+          btnEl.classList.add(`btn--style${Idx+1}`);
+          btnEl.classList.add('fs-xl');
+        }
+        else //btn--style이 들어가 있다면
+        {
+          btnEl.classList.remove(`btn--style${Idx+1}`);
+          btnEl.classList.remove('fs-xl');
+        }
+
+      });//btnEl 이벤트 끝
+
+    }); //btnEls forEach 끝
+       
+  </script>
+</body>
+</html>

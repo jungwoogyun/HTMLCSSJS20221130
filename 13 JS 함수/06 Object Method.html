@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let profile=
+    {
+      // 속성
+      name:'',
+      age:0,
+      // 기능
+      // Getter and Setter
+      getName : ()=>{return this.name;},
+      getAge :  ()=>{return this.age;},
+      setName : (name)=>{this.name=name;},
+      setAge :  (age)=>{this.age=age;}
+    }
+    profile.setName('홍길동');
+    profile.setAge(30);
+    console.log(profile.getName()+","+profile.getAge());
+// ----------------------------------
+//  프로토타입
+    let obj1 = new Object(); //최상위 Object 프로토타입
+    let obj2 = new Array();
+    let obj3 = new Date();
+    console.log(obj1);
+    console.log(obj2);
+    console.log(obj3);
+// ----------------------------------
+// Person 프로토타입 생성
+    function Person(name,age,addr){
+      // 속성
+      this.name=name;
+      this.age=age;
+      this.addr=addr;
+      // 기능
+      this.getName=()=>{return this.name;};
+      this.getAge=()=>{return this.age;};
+    }
+
+    let kim = new Person('김상중',20,'대구');
+    console.log(kim.getName()+","+kim.getAge());
+    // 기능 추가
+    kim.getAddr=function(){ return this.addr;};
+    console.log(kim.getAddr());
+    console.log(kim);
+  </script>
+  
+</body>
+</html>

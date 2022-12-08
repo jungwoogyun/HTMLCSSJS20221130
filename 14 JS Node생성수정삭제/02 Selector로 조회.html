@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul{list-style:none;padding:0px;}
+    a{text-decoration: none; color:black;}
+    .menu{
+      display:flex;
+      justify-content: space-around;
+    }
+    .menu>li{}
+    .menu>li>a{
+      display:block;
+      width:100%;
+      position:relative;
+    }
+    .menu>li>.submenu{
+      display:none;
+      position:absolute;
+    }
+    .menu>li>.submenu>li{}
+
+    .menu>li:hover .submenu{
+      display:block;
+    }
+
+    .menu>li:nth-child(1){
+      background-color:orange;
+    }
+  </style>
+</head>
+<body>
+    <ul class="menu">
+      <li>
+        <a href="">MENU1</a>
+        <ul class="submenu">
+          <li><a href="">SUBMENU1</a></li>
+          <li><a href="">SUBMENU2</a></li>
+          <li><a href="">SUBMENU3</a></li>
+          <li><a href="">SUBMENU4</a></li>
+          <li><a href="">SUBMENU5</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">MENU2</a>
+        <ul class="submenu">
+          <li><a href="">SUBMENU1</a></li>
+          <li><a href="">SUBMENU2</a></li>
+          <li><a href="">SUBMENU3</a></li>
+          <li><a href="">SUBMENU4</a></li>
+          <li><a href="">SUBMENU5</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">MENU3</a>
+        <ul class="submenu">
+          <li><a href="">SUBMENU1</a></li>
+          <li><a href="">SUBMENU2</a></li>
+          <li><a href="">SUBMENU3</a></li>
+          <li><a href="">SUBMENU4</a></li>
+          <li><a href="">SUBMENU5</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <script>
+      const menuEl=document.querySelector('.menu>li:nth-child(2)');
+      menuEl.style.backgroundColor='red';
+
+      const submenuEls=document.querySelectorAll('.submenu>li');
+      submenuEls.forEach((El)=>{El.style.backgroundColor='blue'})
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    //호이스팅(끌어올리다);
+    //코드가 실행되기 전 변수선언/함수선언이 해당 스코프의 최상단으로 끌어 올려진 것 같은 현상
+
+    func1();  //호이스팅o - 선언형태의 함수는 가능 
+    func2();  //호이스팅x - 함수를 데이터로 저장했을때는 불가능
+
+    //기명함수(함수선언)
+    function func1() 
+    {
+      console.log("FUNC1 호출"); 
+    } 
+    //익명함수 - 데이터로 저장(함수표현식을 변수로 저장)
+    const func2=function(){
+      console.log('FUNC2 호출!');
+    };
+    const func3=()=>{
+      console.log('FUNC3 호출!');
+    };
+    //함수 표현식을 권장
+    //이유. 코드 구조를 무너뜨린다. 
+    //이유. 절차대로 처리가 되지 않는다(절차지향의 기본 구조를 무시하기 때문에..)
+    
+    
+  </script>
+</body>
+</html>

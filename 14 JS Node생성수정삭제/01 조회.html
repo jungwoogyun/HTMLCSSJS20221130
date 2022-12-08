@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>ITEM1</li>
+    <li>ITEM2</li>
+    <li class="item">ITEM3</li>
+    <li>ITEM4</li>
+    <li class="item">ITEM5</li>
+    <li>ITEM6</li>
+    <li class="item">ITEM7</li>
+    <li>ITEM8</li>
+  </ul>
+
+  <form action="">
+    <input type="text">
+    <input type="text">
+  </form>
+  <hr>
+  <form action="" name="myForm">
+    <input type="text">
+    <input type="text">
+  </form>
+  <hr>
+  <form action="">
+    <input type="text">
+    <input type="text">
+  </form>
+  <!--  -->
+  <script>
+    // tagName
+    let liEls = document.getElementsByTagName('li');
+    console.log(liEls.length);
+    // 유사배열을 Array로 변경 Array.from(유사배열객체);
+    Array.from(liEls).forEach((liEl) => {
+      liEl.style.backgroundColor = "orange";
+    })
+
+    // className
+    let liEls2 = document.getElementsByClassName('item');
+    console.log(liEls2.length);
+    Array.from(liEls2).forEach((liEl) => {
+      liEl.style.color = "white";
+    })
+
+    // 모든 form 찾기
+    let formEls= document.forms;
+    console.log(formEls.length);
+    Array.from(formEls).forEach((formEl)=>{
+      formEl.children[0].value='abcd';
+      //formEl.children[1].value='efgh';
+    });
+
+    //단일 form 찾기
+    document.myForm[1].value='하하하';
+
+
+  </script>
+
+</body>
+
+</html>
