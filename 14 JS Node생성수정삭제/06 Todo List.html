@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- reset.css cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+  <!-- BS icon cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <!-- todolist.css -->
+  <link rel="stylesheet" href="css/todolist.css">
+
+  <!-- todolist.js -->
+  <script defer src="js/todolist.js"></script>
+
+</head>
+
+<body>
+
+
+  <div class="TodoContainer">
+    <!-- Title : TodoList 제목 -->
+    <div class="Title">
+      <h1>TO DO LIST</h1>
+    </div>
+    <!-- Header : 할일적기 -->
+    <div class="Todo__header">
+      <i class="bi bi-pencil btnicon"></i>
+      <input type="text" class="input">
+      <button class=" btnicon"><i class="bi bi-plus-square "></i></button>
+    </div>
+    <!-- Body  : Todo / Done View -->
+    <div class="Todo__body">
+      <!-- Todo Lists -->
+      <div class="body__Do">
+        <div>
+          <h4>To do List</h4>
+        </div>
+        <ul>
+          <li>
+            <!-- To->Done Button Icon -->
+            <div><button class="btnicon"><i class="bi bi-check-square"></i></button></div>
+            <!-- Content -->
+            <div><span>TESTESTSETSETET</span></div>
+            <!-- Prev/Next Button Icon -->
+            <div>
+              <button class="btnicon"><i class="bi bi-caret-up-square"></i></button>
+              <button class="btnicon"><i class="bi bi-caret-down-square"></i></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- Done Lists -->
+      <div class="body__Done hidden">
+        <div>
+          <h4>Done List</h4>
+        </div>
+        <ul>
+          <li>
+            <!-- To->Done Button Icon -->
+            <div><button class="btnicon"><i class="bi bi-dash-square"></i></button></div>
+            <!-- Content -->
+            <div><span>TESTESTSETSETET</span></div>
+            <!-- Remove Icon -->
+            <div>
+              <button class="btnicon"><i class="bi bi-trash"></i></button>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+    <!-- Footer : 기능 버튼 -->
+    <div class="Todo__footer">
+      <div class="btn btn--Todo">ToDo</div>
+      <div class="btn btn--Done">Done</div>
+      <div class="btn btn--Clear">Clear</div>
+      <div class="btn btn--Etc">ETC</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
