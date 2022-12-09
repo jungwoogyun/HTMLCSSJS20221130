@@ -1,29 +1,62 @@
+/* COMMON */
 *{
   box-sizing: border-box;
+  
 }
 body{
-  
+  font-family: sans-serif;
 }
 
 
 /* 전역 설정 버튼 */
 .btn{
+  width : 120px;
+  height : 30px;
+  border-radius : 10px;
+  font-size:0.8rem;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  background-color : lightgray;
+  margin: 5px;
+  cursor:pointer;
 
 }
-.hidden{
+.btn:hover{
+  opacity:0.5;
+}
 
+.btnicon{
+  font-size:1rem;
+  font-weight:100;
+  border : 0;
+  background-color:white;
+  cursor : pointer;
+}
+.btnicon:hover{
+  color:gray;
+}
+
+
+/* 이벤트 처리시 추가 제거 할 class */
+.hidden{
+  display : none;
 }
 .active{
-
+  display : block;
 }
 
 
 h1{
   font-size:3rem;
-  font-family: sans-serif;
+  margin-bottom:15px;
+  
+  
 }
 h4{
-  margin-bottom:5px;
+  font-size:1.2rem;
+  margin-bottom:10px;
+  width : 200px;
 }
 
 
@@ -51,7 +84,37 @@ h4{
   height : 50px;
   border : 1px solid gray;
   margin-bottom:5px;
+  display : flex;
+  justify-content: space-between;
+  align-items : center;
+  align-content:stretch;
+  position:relative;
 }
+.Todo__header >*{
+  height : 45px;
+}
+.Todo__header >*:nth-child(1){
+  flex-grow : 0;
+  font-size : 1.2rem;
+  padding-left:5px;
+  position:absolute;
+  top:25%;
+    
+  
+}
+.Todo__header >*:nth-child(2){
+  flex-grow : 2;
+  padding-left:30px;
+  font-size:1.3rem;
+  outline:none;
+  
+}
+.Todo__header >*:nth-child(3){
+  flex-grow : 0;
+  width : 45px;height : 45px;
+  
+}
+
 
 /* Todo Body */
 .Todo__body{
@@ -59,7 +122,104 @@ h4{
   border : 1px solid gray;
   padding : 10px;
   margin-bottom:5px;
+  
+  overflow:auto;
 }
+
+
+/* Body - DOIT */
+.Todo__body>.body__Do{
+  overflow :auto;
+}
+.Todo__body>.body__Do>.body__Todolists{
+  
+}
+.Todo__body>.body__Do>.body__Todolists>li{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  border : 1px solid gray;
+  height :45px; 
+  margin-bottom:5px;
+
+ 
+
+}
+.Todo__body>.body__Do>.body__Todolists>li>*:nth-child(1){
+  width :45px;height:45px;
+  font-size:1.2rem;
+  font-weight:100;
+  display:flex;
+  align-items:center;
+  padding-left:5px;
+}
+.Todo__body>.body__Do>.body__Todolists>li>*:nth-child(1):hover{
+  color:gray;
+}
+.Todo__body>.body__Do>.body__Todolists>li>*:nth-child(2){
+  flex-grow: 1;
+}
+.Todo__body>.body__Do>.body__Todolists>li>*:nth-child(3){
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  padding-right:10px;
+}
+
+.Todo__body>.body__Do>.body__Todolists>li button{
+  width : 20px;height : 20px;
+ 
+  
+}
+
+
+
+/* Body - DONE */
+.Todo__body>.body__Done{
+  
+ 
+
+}
+
+
+
+.Todo__body>.body__Done>.body__Donelists{
+  
+}
+.Todo__body>.body__Done>.body__Donelists>li{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  border : 1px solid gray;
+  height :45px;
+  margin-bottom:5px;
+}
+.Todo__body>.body__Done>.body__Donelists>li>*:nth-child(1){
+  width :45px;height:45px;
+  font-size:1.2rem;
+  font-weight:100;
+  display:flex;
+  align-items:center;
+  padding-left:5px;
+
+ 
+}
+.Todo__body>.body__Done>.body__Donelists>li>*:nth-child(2){
+  flex-grow: 1;
+}
+.Todo__body>.body__Done>.body__Donelists>li>*:nth-child(3){
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  padding-right:10px;
+}
+
+.Todo__body>.body__Done>.body__Donelists>li button{
+  width : 40px;height : 40px;
+}
+
 
 
 
@@ -69,5 +229,14 @@ h4{
   height:50px;
   border : 1px solid gray;
   margin-bottom:5px;
+  display : flex;
+  justify-content: space-between;
+  align-items:center;
+}
 
+
+
+@keyframes moving{
+  from{transform:perspective(100px) rotate(45deg)}
+  to{transform:perspective(100px) rotate(0deg)}
 }

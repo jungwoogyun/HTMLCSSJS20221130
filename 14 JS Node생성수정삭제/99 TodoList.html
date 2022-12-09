@@ -27,45 +27,53 @@
     </div>
     <!-- 적기 -->
     <div class="Todo__header">
-
+      <i class="bi bi-check-lg"></i>
+      <input type="text" class="input">
+      <button class="btnicon" onclick="addItem()"><i class="bi bi-plus-square"></i></button>
     </div>
     <!-- 확인 -->
     <div class="Todo__body">
       <!-- To do LIST -->
-      <div>
+      <div class="body__Do">
         <div>
           <h4>To do List</h4>
         </div>
         <ul class="body__Todolists">
-
+       <!--
           <li>
-            <div><i class="bi bi-check-square"></i></div>
-            <div><span>할일들~~~~~~~~~~~</span></div>
+            <div><button class="btnicon"><i class="bi bi-check-square"></i></button></div>
+            <div><span</span></div>
+            <div>
+              <button class="btnicon"><i class="bi bi-arrow-up-square"></i></button>
+              <button class="btnicon"><i class="bi bi-arrow-down-square"></i></button>
+            </div>
           </li>
+        -->
         </ul>
       </div>
       <!-- Done LIST -->
-      <div>
+      <div class="body__Done hidden">
         <div>
           <h4>Done List</h4>
         </div>
         <ul class="body__Donelists">
-
+          <!--
           <li>
             <div><i class="bi bi-check-square"></i></div>
             <div><span>할일들~~~~~~~~~~~</span></div>
-            <div><button>제거</button></div>
+            <div><button class="btnicon"><i class="bi bi-trash .btnicon"></i></button></div>
           </li>
+          -->
         </ul>
       </div>
     </div>
     <!-- 부가 기능 -->
     <div class="Todo__footer">
       <!-- 버튼들, 정보들~ -->
-      <div>buttonToDo</div>
-      <div>Done</div>
-      <div>Clear</div>
-      <div>Clock</div>
+      <div class="btn btn--Todo">ToDo</div>
+      <div class="btn btn--Done">Done</div>
+      <div class="btn btn--Clear">Clear</div>
+      <div class="btn">ETC</div>
     </div>
   </div>
 
