@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        input{outline:none;border:0px;width:90%;height:100%}
+        td{width:50px;height:50px; border : 1px solid gray;}
+        button{width:100%; height:100%;}
+    </style>
+
+    <table id="tbl">
+        <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><button onclick="addrow()">+</button></td>
+        </tr>
+    </table>
+    <script>
+        
+        // 행추가
+        function addrow(){
+            //부모Node
+            tbltg = document.getElementById('tbl');
+            //자식Node 생성
+            newtr = document.createElement('tr');
+            newtd1 = document.createElement('td');
+            newtd2 = document.createElement('td');
+            newtd3 = document.createElement('td');
+            newin1 = document.createElement('input');
+            newin2 = document.createElement('input');
+            newbtn =document.createElement('button');
+            // 자식Node 속성 지정
+            newbtn.innerHTML='-';   
+            newbtn.setAttribute('onclick','removerow(this)');
+
+            // 연결
+            newtd1.append(newin1);
+            newtd2.append(newin2);
+            newtd3.append(newbtn);
+            newtr.append(newtd1);
+            newtr.append(newtd2);
+            newtr.append(newtd3);
+            tbltg.append(newtr);
+
+        }
+        // 행삭제
+        function removerow(rmbtn){
+            rmbtn.parentNode.parentNode.remove();
+            
+        }
+    </script>
+</body>
+</html>
