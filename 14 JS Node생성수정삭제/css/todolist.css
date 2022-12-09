@@ -139,7 +139,13 @@ h4{
   margin-bottom:5px;
   padding : 10px;
   overflow:auto;
+  
 }
+/* 스크롤 기능은 구현하되 모양은 없애기 */
+.TodoContainer>.Todo__body::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
 .TodoContainer>.Todo__body>.body__Do{}
 
 /* ------- TODO ---------- */
@@ -188,6 +194,7 @@ h4{
 }
 .TodoContainer>.Todo__body>.body__Done>ul>li>*:nth-child(3) .btnicon{
   /* font-size:0.8rem; */
+  border : 1px solid gray;
 }
 
 
@@ -201,4 +208,14 @@ h4{
   display:flex;
   justify-content: space-between;
   align-items:center;
+}
+
+/* ANIMATION */
+@keyframes ToDone{
+  from{transform:perspective(80px) rotateX(-180deg) }
+  to{ transform:perspective(80px) rotateX(0deg);}
+}
+@keyframes DoneTo{
+  from{transform:perspective(80px) rotateX(-180deg) }
+  to{ transform:perspective(80px) rotateX(0deg); }
 }
