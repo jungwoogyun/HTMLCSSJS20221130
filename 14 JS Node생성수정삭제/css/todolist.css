@@ -8,7 +8,7 @@ body{
   font-family: sans-serif;
 }
 button{
-  background-color:white;
+  background:none;
   border : 0;
   
   width : 100%;height : 100%;
@@ -28,7 +28,7 @@ h4{
   display:flex;
   justify-content: center;
   align-items: center;
-  background-color:lightgray;
+  background-color:lightblue;
   margin:5px;
   cursor:pointer;
   /* box-shadow:2px 2px 2px gray; */
@@ -140,13 +140,18 @@ h4{
   padding : 10px;
   overflow:auto;
   
+ 
 }
 /* 스크롤 기능은 구현하되 모양은 없애기 */
 .TodoContainer>.Todo__body::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
-.TodoContainer>.Todo__body>.body__Do{}
+.TodoContainer>.Todo__body>.body__Do{
+
+  animation-name:moving;
+  animation-duration: .5s;
+}
 
 /* ------- TODO ---------- */
 .TodoContainer>.Todo__body>.body__Do>ul>li{
@@ -156,6 +161,10 @@ h4{
   border:1px solid gray;
   padding:5px;
   margin-bottom:5px;
+}
+.TodoContainer>.Todo__body>.body__Do>ul>li:hover{
+  background-color:lightblue;
+  opacity: 0.5;
 }
 .TodoContainer>.Todo__body>.body__Do>ul>li>*:nth-child(1){
   width:35px;height:35px;
@@ -173,6 +182,13 @@ h4{
 }
  
 /* ------- DONE ---------- */
+
+.TodoContainer>.Todo__body>.body__Done{
+  animation-name:moving;
+  animation-duration: .5s;
+}
+
+
 .TodoContainer>.Todo__body>.body__Done>ul>li{
   display:flex;
   align-items:center;
@@ -211,11 +227,7 @@ h4{
 }
 
 /* ANIMATION */
-@keyframes ToDone{
+@keyframes moving{
   from{transform:perspective(80px) rotateX(-180deg) }
   to{ transform:perspective(80px) rotateX(0deg);}
-}
-@keyframes DoneTo{
-  from{transform:perspective(80px) rotateX(-180deg) }
-  to{ transform:perspective(80px) rotateX(0deg); }
 }

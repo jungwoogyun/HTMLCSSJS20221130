@@ -5,9 +5,6 @@ const TodoBlockEl = document.querySelector('.TodoContainer>.Todo__body>.body__Do
 const DoneBlockEl = document.querySelector('.TodoContainer>.Todo__body>.body__Done');
 
 DoneBtnEl.addEventListener('click', function () {
-  //animation
-  TodoBlockEl.style.animationName='ToDone';
-  TodoBlockEl.style.animationDuration='1s';
 
   DoneBlockEl.classList.remove('hidden');
   DoneBlockEl.classList.add('active');
@@ -20,10 +17,7 @@ DoneBtnEl.addEventListener('click', function () {
 })
 
 TodoBtnEl.addEventListener('click', function () {
-  // animation
-  DoneBlockEl.style.animationName='DoneTo';
-  DoneBlockEl.style.animationDuration='1s';
-
+  
   TodoBlockEl.classList.remove('hidden');
   TodoBlockEl.classList.add('active');
 
