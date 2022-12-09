@@ -73,7 +73,21 @@ h4{
   border-radius: 0 50px 0 0;
   border : 1px solid gray;
   padding:10px;
+   
 }
+/* 배경  */
+.TodoContainer::before{
+  width : 100%;
+  height : 100%;
+  position:absolute;
+  left:0px;top:0px;
+  content:'';
+  background-image:url('../image/bg2.jpg');
+  background-size:cover;
+  opacity: 0.5;
+  z-index:-1;
+}
+
 /* Title */
 .TodoContainer>.Title{
   width : 100%;
@@ -101,6 +115,8 @@ h4{
 .TodoContainer>.Todo__header>input{
   height:45px;
   width : 100%;
+  background-color:white;
+  
 }
 .TodoContainer>.Todo__header>*:nth-child(1){
 
@@ -122,6 +138,7 @@ h4{
   border : 1px solid gray;
   margin-bottom:5px;
   padding : 10px;
+  overflow:auto;
 }
 .TodoContainer>.Todo__body>.body__Do{}
 
