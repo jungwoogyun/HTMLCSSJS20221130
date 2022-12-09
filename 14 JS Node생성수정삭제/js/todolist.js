@@ -54,12 +54,47 @@ InputEl.addEventListener('keydown',function(){
 // Todo->Done Move
 const ToDoneList=function(El){
   // alert("CLICKED");
-  // alert(El);                 //button
-  // alert(El.parentNode);        //div
-  // alert(El.parentNode.parentNode); //li
+  // alert(El);                         //button
+  // alert(El.parentNode);              //div
+  // alert(El.parentNode.parentNode);   //li
   const liEl=El.parentNode.parentNode;
 
-  const DoneListEl=document.querySelector('.TodoContainer>.Todo__body>.body__Done>ul');
+  // 1,3 icon 변경
+  const childEl1 = liEl.children[0]; //li안의 1번째 div태그(아이콘)
+  const childEl2 = liEl.children[1]; //li안의 2번째 div태그(내용)
+  const childEl3 = liEl.children[2]; //li안의 3번째 div태그(아이콘)
+
+  childEl1.children[0].remove(); //1번째 div태그 안의 첫번째 자식 제거
+  childEl1.innerHTML='<button class="btnicon" onclick="ToTodoList(this)"><i class="bi bi-dash-square"></i></button>';
+
+  childEl3.children[0].remove(); //3번째 div태그 안의 첫번째 자식 제거
+  childEl3.innerHTML='<button class="btnicon"><i class="bi bi-trash"></i></button>';
+
+  // TodoListUl -> DoneListUl로 li옮기기
+  const DoneListUlEl=document.querySelector('.TodoContainer>.Todo__body>.body__Done>ul');
+  DoneListUlEl.append(liEl);
+}
+
+// DoneList->TodoList li move
+const ToTodoList=function(El){
+  // alert("clicked!!");
+  const liEl=El.parentNode.parentNode;  //li 태그
+  // 1,3 icon 변경
+  const childEl1 = liEl.children[0]; //li안의 1번째 div태그(아이콘)
+  const childEl2 = liEl.children[1]; //li안의 2번째 div태그(내용)
+  const childEl3 = liEl.children[2]; //li안의 3번째 div태그(아이콘)
+
+  childEl1.children[0].remove(); //1번째 div태그 안의 첫번째 자식 제거
+  childEl1.innerHTML='<button class="btnicon" onclick="ToDoneList(this)"><i class="bi bi-check-square"></i></button>';
+
+  childEl3.children[0].remove(); //3번째 div태그 안의 첫번째 자식 제거
+  childEl3.innerHTML='<button class="btnicon"><i class="bi bi-caret-up-square"></i></button>';
+  childEl3.innerHTML+='<button class="btnicon"><i class="bi bi-caret-down-square"></i></button>';
+  
+  // DoneListUl -> TodoListUl  로 li옮기기
+  const TodoListUlEl=document.querySelector('.TodoContainer>.Todo__body>.body__Do>ul');
+  TodoListUlEl.append(liEl);
 
 }
 
+// 휴지통 버리기
