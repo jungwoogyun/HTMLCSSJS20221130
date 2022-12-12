@@ -8,8 +8,23 @@ new Swiper('section>.main-banner>.inner>.swiper',{
 
   // navigation 
   navigation:{
-    prevEl:'',
-    nextEl:''
-  }
+    prevEl:'section>.main-banner>.inner>.swiper>.swiper-button-prev',
+    nextEl:'section>.main-banner>.inner>.swiper>.swiper-button-next'
+  },
+  //pagination
+  pagination:{
+    el:'.main-banner .swiper-pagination',
+    type:'fraction', //bullets,progressbar,fraction
+    clickable:'true'
+  },
+  // 마우스 휠 효과
+  mousewheel:true,
+  effect : 'fade',
+  speed:1000,
   
+  // 스크롤 바 
+  scrollbar:{
+    el:'.main-banner .swiper-scrollbar',
+    draggable:true
+  }
 });

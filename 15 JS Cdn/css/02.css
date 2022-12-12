@@ -6,6 +6,7 @@ section>.main-banner>.inner{}
 section>.main-banner>.inner>.swiper{
   border:1px solid gray;
   height:530px;
+  /* height:530px; */
 
 }
 section>.main-banner>.inner>.swiper>.swiper-wrapper{}
@@ -58,10 +59,34 @@ section>.main-banner>.inner>.swiper>.swiper-button-next
   font-weight:700;
   background-color:white;
   /* border : 1px solid greenyellow; */
+  position:absolute;
+  left:1%;
+  top:50%;
+}
+section>.main-banner>.inner>.swiper>.swiper-button-next{
+  left:95.5%;
+ 
 }
 
 section>.main-banner>.inner>.swiper>.swiper-button-prev:hover,
 section>.main-banner>.inner>.swiper>.swiper-button-next:hover
 {
   opacity: .5;
+}
+
+
+.main-banner .swiper-pagination{
+    background-color:orange;
+    /* display:block;
+    height : 30px;
+    line-height:20px;
+    width : 100%;
+    position:absolute;
+    bottom:0; */
+
+}
+.main-banner .swiper-scrollbar
+{
+    height:30px;
+    background-color :aqua;
 }
