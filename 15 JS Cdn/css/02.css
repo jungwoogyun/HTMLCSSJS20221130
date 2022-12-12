@@ -4,11 +4,12 @@ section{
 section>.main-banner{}
 section>.main-banner>.inner{
   /* width : 100%; */
+  padding : 0;
 }
 section>.main-banner>.inner>.swiper{
   border:1px solid gray;
   height:530px;
-  /* height:530px; */
+  
 
 }
 section>.main-banner>.inner>.swiper>.swiper-wrapper{}
@@ -64,7 +65,7 @@ section>.main-banner .swiper-button-next
   background-color:gray;
   position:absolute;
   left:10%;
-  top:84.5%;
+  top:82%;
   
    
 }
@@ -86,7 +87,7 @@ section>.main-banner .swiper-button-next:hover
      
     position:absolute;
     left:18.5%;
-    bottom:8px;
+    top:86%;
 }
 .main-banner .swiper-scrollbar
 {
@@ -94,6 +95,6 @@ section>.main-banner .swiper-button-next:hover
     bottom:0;
     left:0;
     width :100%;
-    height:10px;
+    height:3px;
     background-color:cadetblue;
 }

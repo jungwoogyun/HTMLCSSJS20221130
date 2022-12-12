@@ -10,9 +10,11 @@ header>.inner>.gnb-top{
 }
 header>.inner>.gnb-top>.header-banner{
   border : 1px solid gray;
+  
 }
 header>.inner>.gnb-top>.header-banner>.swiper{
   height : 42px;
+  
 }
 header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper{}
 header>.inner>.gnb-top>.header-banner>.swiper>.swiper-wrapper>.swiper-slide{
@@ -38,11 +40,11 @@ header>.inner>.gnb-top>.sub-menu{}
 /* gnb-second */
 header>.inner>.gnb-second{
   height : 86px;
-  border-bottom : 1px solid gray;
+  border : 1px solid gray;
 }
 
 /* gnb */
 header>.inner>.gnb{
   height : 65px;
-  border-bottom : 1px solid gray;
+  border : 1px solid gray;
 }

@@ -8,8 +8,18 @@ body{
 }
 
 .inner{
-  width : 1400px;
+  /* width : 1400px; */
   margin : 0 auto;
   position : relative;
-  /* background-color :orange; */
+  /* border : 1px solid gray; */
+  /* background-color :blanchedalmond; */
+}
+
+
+header>.inner>.gnb-top>.header-banner,
+header>.inner>.gnb-second,
+header>.inner>.gnb,
+.second-banner>.inner
+{
+  padding:0 150px;
 }
