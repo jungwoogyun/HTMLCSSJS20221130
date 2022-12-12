@@ -1,0 +1,14 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size:1.2rem;
+}
+
+.inner{
+  width : 1400px;
+  margin : 0 auto;
+  position : relative;
+  /* background-color :orange; */
+}

@@ -1,0 +1,30 @@
+/* header */
+header{}
+
+header>.inner{}
+
+/* gnb-top */
+header>.inner>.gnb-top{
+  height : 42px;
+  border-bottom : 1px solid gray;
+  
+}
+
+header>.inner>.gnb-top>.header-banner{
+
+}
+
+header>.inner>.gnb-top>.sub-menu{}
+
+
+/* gnb-second */
+header>.inner>.gnb-second{
+  height : 86px;
+  border-bottom : 1px solid gray;
+}
+
+/* gnb */
+header>.inner>.gnb{
+  height : 65px;
+  border-bottom : 1px solid gray;
+}
