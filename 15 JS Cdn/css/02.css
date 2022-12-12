@@ -1,0 +1,15 @@
+section{}
+
+section>.main-banner{}
+
+section>.main-banner>.inner{}
+
+section>.main-banner>.inner>.swiper{
+  height:530px;
+  border:1px solid gray;
+}
+section>.main-banner>.inner>.swiper>swiper-wrapper{}
+section>.main-banner>.inner>.swiper>swiper-wrapper>.swiper-slide{}
+section>.main-banner>.inner>.swiper>swiper-wrapper>.swiper-slide img{}
+
+
