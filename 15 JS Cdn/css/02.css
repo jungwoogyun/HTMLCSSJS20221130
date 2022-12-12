@@ -2,7 +2,9 @@ section{
   /* border:1px solid gray; */
 }
 section>.main-banner{}
-section>.main-banner>.inner{}
+section>.main-banner>.inner{
+  /* width : 100%; */
+}
 section>.main-banner>.inner>.swiper{
   border:1px solid gray;
   height:530px;

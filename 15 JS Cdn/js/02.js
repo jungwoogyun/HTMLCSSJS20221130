@@ -18,7 +18,7 @@ new Swiper('.main-banner .swiper',{
     clickable:'true'
   },
   // 마우스 휠 효과
-  mousewheel:true,
+  mousewheel:false,
   effect : 'fade',
   speed:1000,
   

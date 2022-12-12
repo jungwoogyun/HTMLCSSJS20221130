@@ -1,0 +1,54 @@
+section>.sticky-banner{
+  width : 95px;
+  height : 152px;
+  /* border : 1px solid gray; */
+  border-radius:10px;
+  font-size:12px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  background-color:bisque;
+  /* box-shadow: 3px 3px 15px lightgray; */
+
+  position:fixed;
+  left:0px;top:200px;
+  z-index:3;
+
+   
+}
+section>.sticky-banner>*{
+  margin:4px;
+}
+
+section>.sticky-banner>.stkban-top{}
+section>.sticky-banner>.stkban-top>img{}
+
+section>.sticky-banner>.stkban-txt{}
+
+section>.sticky-banner>a{}
+
+
+@keyframes fade-out {
+  from{opacity:0;}
+  to{opacity:1; }
+}
+@keyframes fade-in {
+  from{opacity:1;}
+  to{opacity:0; }
+}
+
+.badge--hidden{
+  display:none;
+  animation-name : fade-in;
+  animation-fill-mode: forwards; 
+  animation-duration:1s; 
+}
+.badge--show{
+  display:block;
+  animation-name : fade-out;
+  animation-fill-mode: forwards;
+  animation-duration:1s;
+}
+

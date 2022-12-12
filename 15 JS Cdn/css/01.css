@@ -1,7 +1,7 @@
 /* header */
 header{}
 
-header>.inner{}
+header>.inner{ }
 
 /* gnb-top */
 header>.inner>.gnb-top{
