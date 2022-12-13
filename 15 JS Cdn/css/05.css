@@ -13,24 +13,43 @@
 /*   
   border : 5px solid red; */
   height:1000px;
-
+  display:flex;
+  justify-content:space-around;
 }
 
-.background-fixed>.inner>.txt01{
-  position:absolute;
-  left:25%;
-  top:130px;
+.background-fixed>.inner>.txtgroup{
+  
+  /* border : 1px solid white; */
+  width :680px;
+  height : 500px;
+  text-align:right;
+  position:sticky;
+  top:0px;
+  margin-top:50px;
   
 }
-.background-fixed>.inner>.txt02{
-  position:absolute;
-  left:21%;
-  top:380px;
+.background-fixed>.inner>.txtgroup >.txt01{
+  display:block;
+  position:absolute;  
+  right:0;
+  margin-bottom:50px;
 }
-.background-fixed>.inner>.img01{
+.background-fixed>.inner>.txtgroup >.txt02{
+  display:block;
+  position:absolute;    
+  top:300px;
+  right:0;
+   
+
+   
+}
+
+
+
+.background-fixed>.inner .img01{
   position:sticky;
   left:80%;
   top:50px;
-
+   
 
 }
