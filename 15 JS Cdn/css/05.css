@@ -1,5 +1,5 @@
 .background-fixed{
-  height:1000px;
+  height:800px;
   /* border:1px solid gray; */
   background-image:url('../image/2022_Chrismas2_PTF_bg.png');
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@
 .background-fixed>.inner{
 /*   
   border : 5px solid red; */
-  height:1000px;
+  height:800px;
   display:flex;
   justify-content:space-around;
 }
