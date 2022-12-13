@@ -1,0 +1,36 @@
+.background-fixed{
+  height:1000px;
+  /* border:1px solid gray; */
+  background-image:url('../image/2022_Chrismas2_PTF_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:contain;
+  background-attachment:fixed;
+  padding:100px 0;
+}
+
+.background-fixed>.inner{
+/*   
+  border : 5px solid red; */
+  height:1000px;
+
+}
+
+.background-fixed>.inner>.txt01{
+  position:absolute;
+  left:25%;
+  top:130px;
+  
+}
+.background-fixed>.inner>.txt02{
+  position:absolute;
+  left:21%;
+  top:380px;
+}
+.background-fixed>.inner>.img01{
+  position:sticky;
+  left:80%;
+  top:50px;
+
+
+}
