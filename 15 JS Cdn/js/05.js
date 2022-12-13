@@ -24,5 +24,4 @@ window.addEventListener('scroll',_.throttle(function(){
     badgeEl.classList.remove('badge--hidden');
    
   }
-
 },300));

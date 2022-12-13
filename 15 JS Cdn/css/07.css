@@ -1,0 +1,33 @@
+
+/* gnb-top  42px*/
+header>.inner>.gnb-top{
+ background-color :beige;
+ position:fixed;
+ width:100%;
+ z-index:10;
+ top:0px;
+}
+
+/* gnb-second 86px*/
+header>.inner>.gnb-second{
+  background-color :lightgray;
+  position:fixed;
+  width:100%;
+  top:42px;
+  z-index:8;
+  transition:.5s;
+}
+
+/* gnb  62px*/
+header>.inner>.gnb{
+  background-color :lightgreen;
+  position:fixed;
+  top:128px;
+  width:100%;
+  z-index:8;
+  transition:.5s;
+}
+body{
+  padding-top:190px;
+  transition:.5s;
+}
