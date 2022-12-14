@@ -1,0 +1,96 @@
+.banner-toggle {
+  margin-top: 50px;
+  /* height: 40px; */
+  /* background-color: lightgray; */
+  overflow : hidden;
+}
+
+.banner-toggle>.inner {
+  width: 1400px;
+  height: 40px;
+  background-color: orange;
+  display: flex;
+
+}
+
+.banner-toggle>.inner>.left {
+  flex-grow: 1;
+  font-size: 2rem;
+  background-color:   royalblue;
+  display:flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.banner-toggle>.inner>.left>a{
+  color : white;
+  display:block;
+  width : 45px;
+  height : 35px;
+  border-radius:10%;
+  margin-right : 10px;
+ 
+  display:flex;
+  justify-content: center;
+ 
+
+}
+
+.banner-toggle>.inner>.left>a>i {
+  display:block;
+  color:white;
+ 
+}
+
+.banner-toggle>.inner>.right {
+  flex-grow: 1;
+
+}
+
+/* toggle-banner */
+
+.toggle-banner{
+
+}
+
+.toggle-banner>.inner{}
+
+.toggle-banner>.inner>.swiper{}
+
+.toggle-banner>.inner>.swiper>.swiper-wrapper{}
+
+.toggle-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide{}
+
+.toggle-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide>img{}
+
+.toggle-banner>.inner>.swiper>.swiper-scrollbar{
+  display:none;
+}
+
+
+@keyframes bannerHide {
+  from{opacity:1; margin-top:0px;}
+  to{opacity:1; margin-top:-420px;}
+}
+@keyframes BannerShow {
+  from{opacity:0; margin-top:-420px;}
+  to{opacity:1;margin-top:0px; }
+}
+
+.Banner--hidden{
+  display:block;  
+  animation-name : bannerHide;
+  animation-fill-mode: forwards; 
+  animation-duration:1s; 
+  
+  position:relative;
+  z-index:-1;
+}
+.Banner--show{
+  display:block;
+  animation-name : BannerShow;
+  animation-fill-mode: forwards;
+  animation-duration:1s;
+  position:relative;
+  z-index:1;
+}

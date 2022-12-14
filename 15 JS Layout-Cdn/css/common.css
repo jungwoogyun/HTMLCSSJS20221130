@@ -1,0 +1,25 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size:1.2rem;
+  height:7000px;
+}
+
+.inner{
+  /* width : 1400px; */
+  margin : 0 auto;
+  position : relative;
+  /* border : 1px solid gray; */
+  /* background-color :blanchedalmond; */
+}
+
+
+header>.inner>.gnb-top>.header-banner,
+header>.inner>.gnb-second,
+header>.inner>.gnb,
+.second-banner>.inner
+{
+  padding:0 150px;
+}

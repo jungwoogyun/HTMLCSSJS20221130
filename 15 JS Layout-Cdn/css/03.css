@@ -1,0 +1,57 @@
+.second-banner{}
+
+.second-banner>.inner{}
+
+.second-banner>.inner>.swiper{
+
+  height :420px;
+ 
+  
+}
+
+.second-banner>.inner>.swiper>.swiper-wrapper{
+ 
+}
+
+.second-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide{
+  /* border : 1px solid gray; */
+  border-radius: 30px;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+
+  transition:.5s;
+  transform:scale(0.7);
+  /* background-color:orange; */
+  opacity: 0.5;
+   
+
+}
+.second-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide img{
+  width : 400px;
+  height : 400px;
+  margin:0 300px;
+  
+}
+
+.second-banner>.inner>.swiper>.swiper-wrapper>.swiper-slide.swiper-slide-active{
+  /* background-color:red; */
+  opacity: 1;
+  transform:scale(0.9);
+}
+.second-banner>.inner>.swiper>.swiper-pagination{}
+
+.second-banner>.inner>.swiper>.swiper-button-prev{}
+
+.second-banner>.inner>.swiper>.swiper-button-next{}
+
+.second-banner>.inner>.swiper>.swiper-scrollbar{}
+
+ 
+
+
+
+
+
+
+
