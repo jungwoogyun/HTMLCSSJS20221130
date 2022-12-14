@@ -6,11 +6,17 @@ toTopBtnEl.addEventListener('click',function(){
   
 })
 
+let toTopflag = false;
 window.addEventListener('scroll',_.throttle(function(){
-  if(window.scrollY>700 ){
+  if(window.scrollY>700){
+    if(toTopflag==false){
+      toTopBtnEl.style.display='flex';
+      toTopflag=true;
+    }
     //버튼 표시
     toTopBtnEl.classList.remove('btn--ToRight');
     toTopBtnEl.classList.add('btn--Toleft');
+   
   }else{
 
     //버튼 숨기기
